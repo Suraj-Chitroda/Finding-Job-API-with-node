@@ -1,7 +1,7 @@
 const sequelize = require('sequelize');
 const db = require('../config/database');
 
-const jobs = db.define('job', {
+const job = db.define('job', {
     title: {
         type: sequelize.STRING
     },
@@ -19,3 +19,4 @@ const jobs = db.define('job', {
     },
 });
 
+module.exports = job;

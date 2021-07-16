@@ -11,9 +11,11 @@ const PORT = process.env.PORT || 5000;
 
 app.get('/', (req, res) => res.send('STARED'));
 
+app.use('/jobs', require('./routes/jobs'));
 
+console.log("Authenticating Database");
 db.authenticate()
-    .then(() => console.log("Database connected"))
+    .then(() => console.log("Database authentication successfull"))
     .catch((err) => console.log("ERROR: " + err));
 
 
