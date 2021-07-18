@@ -1,0 +1,23 @@
+<section id="gigs" class="container">
+    <h1>All Jobs</h1>
+
+
+    {{#each data}}
+
+    <div class="gig">
+        <h3>{{this.dataValues.title}}</h3>
+        <p>{{this.dataValues.description}}</p>
+        <ul>
+            <li>{{this.dataValues.budget}}</li>
+            <li><a href="mailto:{{this.dataValues.email}}" class="btn btn-reverse">Apply Now</a></li>
+        </ul>
+        <div class="tech">
+            <small>Technologies Needed: <span>{{this.dataValues.technology}}</span></small>
+        </div>
+    </div>
+    {{else}}
+    <p> There is no data available. </p>
+
+    {{/each}}
+
+</section>
